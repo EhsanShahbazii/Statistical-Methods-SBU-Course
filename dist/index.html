@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#173d3b"><meta name="description" content="کتاب تعاملی روش‌های آماری؛ متن کامل جزوه، شبیه‌سازی‌های تعاملی و نسخهٔ PDF. استاد: دکتر سکینه دهقان؛ گردآورندگان: علیرضا جهانبخش و احسان شهبازی.">
+  <meta property="og:title" content="روش‌های آماری — کتاب و حل تمرین تعاملی">
+  <meta property="og:description" content="کتاب تعاملی روش‌های آماری و کلاس‌های حل تمرین؛ استاد: دکتر سکینه دهقان؛ گردآورندگان: علیرضا جهانبخش و احسان شهبازی.">
+  <meta property="og:image" content="assets/header4.jpg">
   <title>روش‌های آماری — کتاب تعاملی</title>
   <link rel="stylesheet" href="vendor/katex/katex.min.css"><link rel="stylesheet" href="style.css">
   <script defer src="vendor/katex/katex.min.js"></script><script type="module" src="app.js"></script>
@@ -11,7 +14,20 @@
   <a class="skip" href="#main">رفتن به محتوای کتاب</a>
   <header class="topbar">
     <a href="#home" class="brand"><span class="brand-symbol" aria-hidden="true">∑</span><span>روش‌های آماری<small>کتابِ تعاملی</small></span></a>
-    <nav aria-label="ناوبری اصلی"><button data-view="read" class="nav-btn active">مطالعهٔ کتاب</button><button data-view="labs" class="nav-btn">آزمایشگاه</button><button data-view="pdf" class="nav-btn">نسخهٔ PDF</button></nav>
+    <nav aria-label="ناوبری اصلی">
+      <button data-view="read" class="nav-btn active">مطالعهٔ کتاب</button>
+      <div class="nav-dropdown-wrap">
+        <button data-view="ta" class="nav-btn nav-btn-ta" aria-haspopup="true" aria-expanded="false">کلاس‌های حل تمرین <span class="nav-caret">▾</span></button>
+        <div class="nav-dropdown-menu" id="ta-dropdown">
+          <a href="#ta-1" data-ta-session="0" class="dropdown-item"><span class="item-tag tag-ready">آماده مطالعه</span><strong>جلسه اول</strong><small>برآورد نقطه‌ای، نااریبی، کارایی، سازگاری</small></a>
+          <a href="#ta-2" data-ta-session="1" class="dropdown-item"><span class="item-tag tag-wait">به‌زودی</span><strong>جلسه دوم</strong><small>به‌زودی پس از تشکیل کلاس</small></a>
+          <a href="#ta-3" data-ta-session="2" class="dropdown-item"><span class="item-tag tag-wait">به‌زودی</span><strong>جلسه سوم</strong><small>به‌زودی پس از تشکیل کلاس</small></a>
+          <a href="#ta-4" data-ta-session="3" class="dropdown-item"><span class="item-tag tag-wait">به‌زودی</span><strong>جلسه چهارم</strong><small>به‌زودی پس از تشکیل کلاس</small></a>
+        </div>
+      </div>
+      <button data-view="labs" class="nav-btn">آزمایشگاه</button>
+      <button data-view="pdf" class="nav-btn">نسخهٔ PDF</button>
+    </nav>
     <div class="header-actions"><button id="search-open" class="icon-btn" aria-label="جست‌وجو در کتاب">⌕</button><button id="settings-open" class="icon-btn" aria-label="تنظیمات مطالعه">آ<span class="small-a">آ</span></button><button id="menu" class="icon-btn mobile" aria-label="نمایش فهرست" aria-expanded="false">☰</button></div>
   </header>
   <div class="layout">
@@ -32,7 +48,7 @@
       </section>
       <section id="labs-view" hidden><div class="page-heading"><span class="eyebrow">مشاهده، تغییر، کشف</span><h1>آزمایشگاه آمار</h1><p>یک مفهوم را انتخاب کنید؛ پارامترها را تغییر دهید و نتیجه را در لحظه ببینید. این آزمایش‌ها برای یادگیری‌اند و داده‌های شبیه‌سازی‌شده دارند.</p></div><div id="lab-index" class="lab-index"></div><div id="standalone-lab"></div></section>
       <section id="pdf-view" hidden><div class="pdf-header"><div><span class="eyebrow">همان جزوه، همان صفحه‌آرایی</span><h1>نسخهٔ اصلی کتاب</h1></div><a class="secondary" href="assets/lecture.pdf" download>↓ دریافت PDF</a></div><details class="chapter-exports"><summary>↓ دانلود فصل به فصل (PDF و LaTeX)</summary><div id="chapter-export-list"></div></details><div class="pdf-controls"><button id="pdf-prev" class="secondary" aria-label="صفحهٔ قبل">→</button><label>صفحه <input id="pdf-page" type="number" min="1" max="42" value="1" aria-label="شمارهٔ صفحه PDF"> از <span id="pdf-count">۴۲</span></label><button id="pdf-next" class="secondary" aria-label="صفحهٔ بعد">←</button><button id="pdf-zoom-out" class="icon-btn" aria-label="کوچک‌نمایی">−</button><span id="pdf-zoom">۱۰۰٪</span><button id="pdf-zoom-in" class="icon-btn" aria-label="بزرگ‌نمایی">+</button></div><p id="pdf-status" role="status"></p><div id="pdf-container"><canvas dir="ltr" id="pdf-canvas" aria-label="صفحهٔ جزوه"></canvas></div></section>
-      <footer class="footer"><div><b>روش‌های آماری</b><span>متن درس، همراه با تجربهٔ یادگیری</span></div><p>استاد: دکتر سکینه دهقان · گردآورندگان: علیرضا جهانبخش و احسان شهبازی</p><a href="assets/lecture.tex" download>دریافت منبع لاتک ↗</a><p class="footer-credit">توسعه داده شده با <span class="credit-heart" role="img" aria-label="عشق">❤️</span> برای آماردان های آینده توسط <a href="https://github.com/EhsanShahbazii" target="_blank" rel="noopener noreferrer">احسان شهبازی</a></p></footer>
+      <footer class="footer"><div><b>روش‌های آماری</b><span>متن درس، همراه با تجربهٔ یادگیری</span></div><p>استاد: دکتر سکینه دهقان · گردآورندگان: علیرضا جهانبخش و احسان شهبازی</p><a href="assets/lecture.tex" download>دریافت منبع لاتک ↗</a><p class="footer-credit">توسعه داده شده با <span class="credit-heart" role="img" aria-label="عشق">❤️</span> برای آماردان های آینده توسط <a href="https://github.com/EhsanShahbazii" target="_blank" rel="noopener noreferrer">احسان شهبازی</a> و <a href="https://github.com/Alizjahan" target="_blank" rel="noopener noreferrer">علیرضا جهانبخش</a></p></footer>
     </main>
     <aside class="margin-notes" id="margin-notes"><span class="sidebar-caption">در این بخش</span><nav id="on-this-page"></nav><div class="note-card"><span class="note-icon">↗</span><b>فرمول را تجربه کنید</b><p>آزمایشگاه‌های مرتبط میان متن قرار دارند. با تغییر ورودی‌ها، اثر هر پارامتر را کشف کنید.</p><button data-view="labs" class="text-btn">همهٔ آزمایشگاه‌ها ←</button></div><div id="saved-list"></div></aside>
   </div>

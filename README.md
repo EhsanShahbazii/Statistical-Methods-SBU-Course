@@ -1,6 +1,6 @@
 <div align="center">
 
-![روش‌های آماری — کتاب تعاملی](docs/assets/statistical-methods-banner.png)
+![روش‌های آماری — کتاب تعاملی](docs/assets/header4.jpg)
 
 # روش‌های آماری | Statistical Methods
 
@@ -23,9 +23,9 @@ A Persian interactive statistics textbook, with visual experiments and downloada
 
 این پروژه، جزوهٔ درس **روش‌های آماری دکتر سکینه دهقان** را به یک کتاب تعاملی فارسی تبدیل می‌کند: متن و فرمول‌ها را بخوانید، پارامترهای آزمایش‌ها را تغییر دهید، رفتار نمودارها را ببینید و نسخهٔ PDF یا لاتک هر فصل را همراه خود داشته باشید.
 
-گردآورندگان جزوه: **علیرضا جهانبخش و [احسان شهبازی](https://github.com/EhsanShahbazii)**.
+گردآورندگان جزوه: **[علیرضا جهانبخش](https://github.com/Alizjahan) و [احسان شهبازی](https://github.com/EhsanShahbazii)**.
 
-توسعهٔ وبسایت: **[احسان شهبازی](https://github.com/EhsanShahbazii)**.
+توسعهٔ وبسایت: **[احسان شهبازی](https://github.com/EhsanShahbazii) و [علیرضا جهانبخش](https://github.com/Alizjahan)**.
 
 ## چه چیزی اینجا پیدا می‌کنید؟
 
@@ -66,7 +66,16 @@ A Persian interactive statistics textbook, with visual experiments and downloada
 | فصل سوم · فاصله‌های اطمینان | [دانلود](dist/assets/chapters/chapter-3.pdf) | [منبع](dist/assets/chapters/chapter-3.tex) |
 | فصل چهارم · آزمون فرض | [دانلود](dist/assets/chapters/chapter-4.pdf) | [منبع](dist/assets/chapters/chapter-4.tex) |
 | پیوست | [دانلود](dist/assets/chapters/chapter-5.pdf) | [منبع](dist/assets/chapters/chapter-5.tex) |
-| **جزوهٔ کامل** | **[دانلود PDF](dist/assets/lecture.pdf)** | **[منبع کامل](dist/assets/lecture.tex)** |
+| **جزوهٔ کامل کتاب** | **[دانلود PDF](dist/assets/lecture.pdf)** | **[منبع کامل](dist/assets/lecture.tex)** |
+
+### کلاس‌های حل تمرین (TA Sessions)
+
+| جلسه | عنوان و سرفصل‌ها | دریافت جزوه |
+|:---|:---|:---:|
+| **جلسه اول** | برآورد نقطه‌ای، نااریبی، کارایی، سازگاری و ۶ تمرین حل‌شده | **[دانلود PDF (۳۲ صفحه)](dist/assets/ta/session-1.pdf)** |
+| جلسه دوم | موضوعات و تمرین‌های جلسه دوم | به‌زودی |
+| جلسه سوم | موضوعات و تمرین‌های جلسه سوم | به‌زودی |
+| جلسه چهارم | موضوعات و تمرین‌های جلسه چهارم | به‌زودی |
 
 فایل‌های لاتک فصل‌ها مستقل‌اند و تعریف‌ها و شکل‌های لازم را همراه دارند؛ برای کامپایل آن‌ها از **XeLaTeX** استفاده کنید.
 
@@ -189,7 +198,7 @@ python tools/build_chapter_exports.py
 
 <div align="center">
 
-**توسعه داده شده با ❤️ برای آماردان‌های آینده توسط [احسان شهبازی](https://github.com/EhsanShahbazii)**
+**توسعه داده شده با ❤️ برای آماردان‌های آینده توسط [احسان شهبازی](https://github.com/EhsanShahbazii) و [علیرضا جهانبخش](https://github.com/Alizjahan)**
 
 با سپاس از **دکتر سکینه دهقان**، استاد درس روش‌های آماری.
 
