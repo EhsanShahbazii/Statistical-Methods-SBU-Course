@@ -162,17 +162,27 @@ function initLabs(){ $('#lab-index').innerHTML=LABS.map((l,i)=>`<button class="l
 
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{
  if(b.dataset.view==='ta'){
+  const dd=$('#ta-dropdown');
+  if(dd)dd.classList.toggle('show');
   navigateTA(currentSession);
  }else{
+  $('#ta-dropdown')?.classList.remove('show');
   switchView(b.dataset.view);
   history.pushState({},'','#'+(b.dataset.view==='read'?book[current].id:b.dataset.view));
   window.scrollTo({top:0});
  }
 }));
 
+document.addEventListener('click',e=>{
+ if(!e.target.closest('.nav-dropdown-wrap')){
+  $('#ta-dropdown')?.classList.remove('show');
+ }
+});
+
 document.querySelectorAll('[data-ta-session]').forEach(a=>{
  a.addEventListener('click',e=>{
   e.preventDefault();
+  $('#ta-dropdown')?.classList.remove('show');
   const idx=+a.dataset.taSession;
   navigateTA(idx);
  });
