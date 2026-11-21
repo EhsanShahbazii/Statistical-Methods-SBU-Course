@@ -228,15 +228,15 @@ async function drawPDF(){if(!pdfDoc||view!=='pdf')return;if(pdfRendering){pdfPen
 $('#pdf-prev').onclick=()=>{if(pdfPage>1){pdfPage--;drawPDF();}};$('#pdf-next').onclick=()=>{if(pdfDoc&&pdfPage<pdfDoc.numPages){pdfPage++;drawPDF();}};$('#pdf-page').onchange=e=>{pdfPage=Math.max(1,Math.min(pdfDoc?.numPages||42,Math.round(+e.target.value)||1));drawPDF();};$('#pdf-zoom-in').onclick=()=>{pdfZoom=Math.min(2,pdfZoom+.25);drawPDF();};$('#pdf-zoom-out').onclick=()=>{pdfZoom=Math.max(.5,pdfZoom-.25);drawPDF();};let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(drawPDF,180);});
 
 try{
- const response=await fetch('./book.json');
+ const response=await fetch('./book.json?v=2.3.0', { cache: 'no-cache' });
  if(!response.ok)throw Error('book data unavailable');
  book=await response.json();
  try{
-  const taRes=await fetch('./ta-sessions.json');
+  const taRes=await fetch('./ta-sessions.json?v=2.3.0', { cache: 'no-cache' });
   if(taRes.ok)taSessions=await taRes.json();
  }catch{taSessions=[];}
  try{
-  const files=await fetch('./assets/chapters/index.json');
+  const files=await fetch('./assets/chapters/index.json?v=2.3.0', { cache: 'no-cache' });
   if(files.ok)chapterExports=await files.json();
  }catch{chapterExports=[];}
  $('.chapter-exports').hidden=chapterExports.length===0;
