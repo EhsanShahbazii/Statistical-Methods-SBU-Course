@@ -36,10 +36,13 @@ console.log('PASS: 6 chapter PDFs and 6 standalone LaTeX sources exist, match th
 
 const taSessions=JSON.parse(fs.readFileSync(new URL('../dist/ta-sessions.json',import.meta.url),'utf8'));
 assert.equal(taSessions.length,4);
-assert.equal(taSessions[0].sections.length,6);
+assert.equal(taSessions[0].sections.length,5);
 const taPdf=fs.readFileSync(new URL('../dist/'+taSessions[0].pdf,import.meta.url));
 assert.equal(taPdf.subarray(0,5).toString(),'%PDF-');
-console.log('PASS: 4 TA problem-solving sessions verified, session 1 complete with 6 sections and PDF.');
+assert.equal(taSessions[1].sections.length,9);
+const ta2Pdf=fs.readFileSync(new URL('../dist/'+taSessions[1].pdf,import.meta.url));
+assert.equal(ta2Pdf.subarray(0,5).toString(),'%PDF-');
+console.log('PASS: 4 TA problem-solving sessions verified, session 1 and session 2 complete with sections and PDFs.');
 
 const {interpolateValue}=await import('../dist/motion.js');
 const morph=interpolateValue('M0,0L10,20','M10,20L30,40');

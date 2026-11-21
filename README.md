@@ -1,19 +1,23 @@
+<p align="center">
+  <img src="docs/assets/header4.jpg" alt="روش‌های آماری — کتاب تعاملی" width="100%">
+</p>
+
 <div align="center">
 
-![روش‌های آماری — کتاب تعاملی](docs/assets/header4.jpg)
-
 # روش‌های آماری | Statistical Methods
+### کتاب تعاملی آمار با ۹ آزمایشگاه بصری، جزوهٔ لاتک و شبیه‌سازی‌های زنده
 
-**از فرمول به شهود؛ آمار را بخوانید، ببینید و تجربه کنید.**
+[![University](https://img.shields.io/badge/University-SBU-0D9DF8?style=flat-square&logo=academia)](https://en.sbu.ac.ir/)
+[![Language](https://img.shields.io/badge/Language-Persian-11685c?style=flat-square)]()
+[![Labs](https://img.shields.io/badge/Interactive_Labs-9-b18a45?style=flat-square)]()
+[![Sections](https://img.shields.io/badge/Sections-39-11685c?style=flat-square)]()
+[![License](https://img.shields.io/badge/License-MIT-34C6BF?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Maintainer](https://img.shields.io/badge/Maintainer-Alizjahan-0F6FFA?style=flat-square&logo=github)](https://github.com/Alizjahan)
 
+**از فرمول به شهود؛ آمار را بخوانید، ببینید و تجربه کنید.**  
 A Persian interactive statistics textbook, with visual experiments and downloadable LaTeX notes.
 
-![Language: Persian](https://img.shields.io/badge/Language-Persian-11685c?style=flat-square)
-![Labs: 9](https://img.shields.io/badge/Interactive_Labs-9-b18a45?style=flat-square)
-![Sections: 39](https://img.shields.io/badge/Book_Sections-39-11685c?style=flat-square)
-![Static site](https://img.shields.io/badge/Hosting-Static_Site-b18a45?style=flat-square)
-
-[📖 منبع جزوه](dist/assets/lecture.tex) · [📥 PDF کامل](dist/assets/lecture.pdf)
+[🌐 وبسایت تعاملی](https://alizjahan.github.io/Statistical-Methods-SBU-Course/) · [📖 منبع جزوه](dist/assets/lecture.tex) · [📥 PDF کامل](dist/assets/lecture.pdf)
 
 </div>
 
@@ -203,3 +207,10 @@ python tools/build_chapter_exports.py
 با سپاس از **دکتر سکینه دهقان**، استاد درس روش‌های آماری.
 
 </div>
+
+
+---
+
+## 📄 لایسنس و حقوق بازنشر (License)
+
+این پروژه و جزوات آن به صورت متن‌باز تحت پروانه **MIT License** منتشر شده است.
