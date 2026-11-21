@@ -1,3 +1,4 @@
+import { session2Intro, session2Sections } from './session2_data.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import katex from 'katex';
@@ -623,23 +624,17 @@ const taSessions = [
 `,
     sections: session1Sections
   },
-  {
+    {
     id: 'session-2',
     number: 2,
-    title: 'جلسه دوم: به‌زودی اضافه می‌شود',
+    title: 'جلسه دوم: برآورد فاصله‌ای و فواصل اطمینان',
     shortTitle: 'جلسه دوم',
-    subtitle: 'موضوعات و تمرین‌های جلسه دوم کلاس‌های حل تمرین',
-    description: 'به‌زودی پس از تشکیل کلاس در دسترس قرار خواهد گرفت.',
-    pages: 0,
-    intro: `
-<div class="ta-placeholder-card">
-  <div class="ta-placeholder-icon">⏳</div>
-  <h3>جلسه دوم هنوز برگزار نشده است</h3>
-  <p>متن کامل جزوه، نکات مفهومی و تمرین‌های حل‌شده این جلسه به‌زودی پس از ارائه در کلاس حل تمرین در این بخش قرار می‌گیرد.</p>
-  <a href="#ta-1" class="primary" style="display:inline-block;margin-top:16px;">مشاهدهٔ جلسه اول (برآورد نقطه‌ای) ←</a>
-</div>
-`,
-    sections: []
+    subtitle: 'کمیت‌های محوری، فواصل اطمینان میانگین، واریانس، نسبت، مشاهدات زوجی و جداول آماری',
+    description: 'درس‌نامه جامع، نکات مفهومی و مثال‌های حل‌شده با بیان ساده و گام‌به‌گام · مدرس حل تمرین: علیرضا جهانبخش',
+    pdf: 'assets/ta/session-2.pdf',
+    pages: 40,
+    intro: session2Intro,
+    sections: session2Sections
   },
   {
     id: 'session-3',
